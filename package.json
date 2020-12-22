@@ -1,0 +1,20 @@
+{
+  "name": "jeanlouisdossantos_3_22122020",
+  "version": "1.0.0",
+  "description": "Projet P3 Openclassroom",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sass": "sass --watch ./sass/main.scss:./public/css/style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jeanlouisdossantos/Jeanlouisdossantos_3_22122020.git"
+  },
+  "author": "Jean Louis DOS SANTOS",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jeanlouisdossantos/Jeanlouisdossantos_3_22122020/issues"
+  },
+  "homepage": "https://github.com/jeanlouisdossantos/Jeanlouisdossantos_3_22122020#readme"
+}

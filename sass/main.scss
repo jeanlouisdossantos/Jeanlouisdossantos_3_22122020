@@ -1,0 +1,8 @@
+$box:100px;
+$box-color:red;
+
+.box{
+    width: $box;
+    height: $box;
+    background-color: $box-color;
+}
