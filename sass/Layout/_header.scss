@@ -1,0 +1,11 @@
+header{
+    display: flex;
+    background-color: $color-white;
+    margin: 0;
+    img{
+        margin:auto;
+        width: 60%;
+        object-fit: cover;
+    }
+
+}
