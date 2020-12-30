@@ -61,8 +61,13 @@ z-index: -1; }
   box-shadow: 5px 5px 5px grey;
 }
 .dishes {
+  width: 80%;
   &__mainname {
     font-weight: 900;
+    width:90%;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;  
     &::first-letter {
       text-transform: uppercase;
     }

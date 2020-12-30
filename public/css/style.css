@@ -254,8 +254,15 @@ footer {
   box-shadow: 5px 5px 5px grey;
 }
 
+.dishes {
+  width: 80%;
+}
 .dishes__mainname {
   font-weight: 900;
+  width: 90%;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 .dishes__mainname::first-letter {
   text-transform: uppercase;
