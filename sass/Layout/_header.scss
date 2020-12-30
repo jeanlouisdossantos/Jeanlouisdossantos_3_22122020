@@ -1,11 +1,10 @@
 header{
     display: flex;
     background-color: $color-white;
-    margin: 0;
-    img{
-        margin:auto;
-        width: 60%;
-        object-fit: cover;
+    .header{
+        &__logo{
+            margin: 0 auto;
+            @include logo-font(32px);
+        }
     }
-
 }

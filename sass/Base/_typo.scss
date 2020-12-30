@@ -1,3 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
 
-$main-typo : 'Roboto'
+$main-typo : 'Roboto';
+$logo-font : 'Shrikhand';
+
+@mixin body-font ($size : 12px) {
+    font-family: 'Roboto', sans-serif;
+    font-size: $size;    
+}
+
+@mixin logo-font  ($size : 20px) {
+    font-family: 'Shrikhand';
+    font-size: $size;
+    
+}
