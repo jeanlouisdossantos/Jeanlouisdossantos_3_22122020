@@ -37,11 +37,11 @@
     }
     &__logo{
         margin-left: 20px;
-        margin-right: 20px;
         color: grey;
     }
     &__text{
       font-weight: 600;
+      margin: auto;
           &::first-letter{
             text-transform: uppercase;
         }

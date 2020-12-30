@@ -1,0 +1,91 @@
+.menu__image {
+    height: 150px;
+    
+     
+    img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover; 
+position:absolute;
+z-index: -1; }
+}
+.menu {
+  background-color: lighten($color: lightgrey, $amount: 13%);
+  display: flex;
+  flex-direction: column;
+  border-radius: 30px 30px 0px 0px;
+  padding: 30px 20px 20px 0px;
+  
+     &__title {
+    display: flex;
+    justify-content: space-between;
+    padding-right: 20px;
+  }
+  button{
+      @include button(40px);
+      margin: 30px auto 50px;
+      &::first-letter{
+          text-transform: uppercase;
+      }
+  }
+}
+.restaurant__name {
+  @include logo-font(18px);
+  margin-left: 10px;
+  &:first-letter {
+    text-transform: capitalize;
+  }
+}
+.dishesgroup {
+  display: flex;
+  flex-direction: column;
+  padding-left: 20px;
+  margin-top: 20px;
+  &__name {
+    text-transform: uppercase;
+
+  }
+  &__underline {
+    width: 30px;
+    height: 2px;
+    background-color: $color-third;
+  }
+}
+.dishes__card {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15px;
+  padding:10px;
+  background-color: $color-white;
+  border-radius: 10px;
+  box-shadow: 5px 5px 5px grey;
+}
+.dishes {
+  &__mainname {
+    font-weight: 900;
+    &::first-letter {
+      text-transform: uppercase;
+    }
+    
+  }
+  &__secondname{
+    &::first-letter {
+        text-transform: uppercase;
+      }
+}
+  &__price {
+    align-self: flex-end;
+    margin: 0px 15px 3px 0px;
+    font-weight: 600;
+  }
+  &__selected {
+    display: none;
+  }
+
+  &:active {
+    &::after {
+      width: 30px;
+      background-color: $color-third;
+    }
+  }
+}
