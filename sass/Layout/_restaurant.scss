@@ -40,5 +40,19 @@
   }
   &__like{
       font-size: 1.5rem;
+      
+      &__span{
+        &:last-child{
+          display: none;
+        }
+        &:hover{
+          
+        }
+      }
+      i{
+        transition: 1s;
+      &:hover{
+        color: red;
+      }}
   }
 }

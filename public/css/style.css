@@ -83,6 +83,9 @@ header .header__logo {
   background-color: #e4d5f6;
   color: #9356DC;
 }
+.howto__steps:hover + .howto__steps__logo {
+  color: #9356DC;
+}
 .howto__steps__number {
   width: 20px;
   height: 20px;
@@ -149,6 +152,15 @@ header .header__logo {
 }
 .restaurant__like {
   font-size: 1.5rem;
+}
+.restaurant__like__span:last-child {
+  display: none;
+}
+.restaurant__like i {
+  transition: 1s;
+}
+.restaurant__like i:hover {
+  color: red;
 }
 
 footer {
