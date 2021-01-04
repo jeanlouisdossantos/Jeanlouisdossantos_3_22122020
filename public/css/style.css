@@ -83,8 +83,8 @@ header .header__logo {
   background-color: #e4d5f6;
   color: #9356DC;
 }
-.howto__steps:hover + .howto__steps__logo {
-  color: #9356DC;
+.howto__steps:hover .howto__steps__logo {
+  color: darker(#9356DC, 10%);
 }
 .howto__steps__number {
   width: 20px;

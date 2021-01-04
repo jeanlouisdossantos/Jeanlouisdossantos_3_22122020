@@ -18,12 +18,12 @@
     margin-top: 30px;
     &:hover{
       background-color: lighten($color-main, $amount: 30);
-      color: $color-main;}
-
-     &:hover+.howto__steps__logo{
-        color: $color-main;
+      color: $color-main;
+      .howto__steps__logo{
+        color: darker($color-main,10%);
       }
-    
+    }
+      
        
     &__number {
       width: 20px;
