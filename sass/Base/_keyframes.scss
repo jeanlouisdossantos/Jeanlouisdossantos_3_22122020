@@ -12,3 +12,11 @@ background-color: $color-main;
         height: 0px;
     }
 }
+@keyframes slidesfromright{
+    from{
+        transform: translateX(2000px)
+    }
+    to{
+        transform: translateX(0px)
+    }
+}

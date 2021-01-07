@@ -64,12 +64,20 @@ footer {
     height: 0px;
   }
 }
+@keyframes slidesfromright {
+  from {
+    transform: translateX(2000px);
+  }
+  to {
+    transform: translateX(0px);
+  }
+}
 .loader {
   width: 100%;
   height: 100vh;
   position: fixed;
   z-index: 10000;
-  animation: loader 0.5s forwards;
+  animation: loader 3s forwards;
 }
 
 .explore {
@@ -107,7 +115,7 @@ footer {
   padding-bottom: 50px;
 }
 .howto__title {
-  padding-left: 20px;
+  margin-left: 10%;
   align-self: flex-start;
 }
 .howto__steps {
@@ -169,16 +177,19 @@ footer {
 .restaurant {
   background-color: #f2f2f2;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  flex-wrap: wrap;
 }
 .restaurant__title {
   margin-left: 10%;
+  width: 90%;
 }
 .restaurant__card {
   margin: 20px auto;
   border-radius: 5px;
   background-color: white;
   width: 80%;
+  max-width: 400px;
   border-radius: 10px;
   box-shadow: 5px 5px 5px grey;
 }
@@ -199,22 +210,21 @@ footer {
   width: 80%;
 }
 .restaurant__desc__title {
-  font-size: larger;
+  font-size: 16px;
   font-weight: bolder;
 }
 .restaurant__desc__title::first-letter {
   text-transform: uppercase;
 }
-.restaurant__like {
-  font-size: 1.5rem;
+.restaurant__desc__title__localisation {
+  font-size: 14px;
 }
-.restaurant__like__span:last-child {
-  display: none;
-}
-.restaurant__like i {
+.restaurant__like .fas {
+  opacity: 0;
   transition: 1s;
 }
-.restaurant__like i:hover {
+.restaurant__like .fas:hover {
+  opacity: 1;
   color: red;
 }
 
@@ -270,6 +280,7 @@ footer {
   flex-direction: column;
   padding-left: 20px;
   margin-top: 20px;
+  animation: slidesfromright 1s;
 }
 .dishesgroup__name {
   text-transform: uppercase;

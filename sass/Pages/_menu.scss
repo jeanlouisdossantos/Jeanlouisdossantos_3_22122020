@@ -41,6 +41,7 @@ z-index: -1; }
   flex-direction: column;
   padding-left: 20px;
   margin-top: 20px;
+  animation: slidesfromright 1s;
   &__name {
     text-transform: uppercase;
 
@@ -50,6 +51,7 @@ z-index: -1; }
     height: 2px;
     background-color: $color-third;
   }
+  
 }
 .dishes__card {
   display: flex;
