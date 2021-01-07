@@ -2,12 +2,9 @@
 @import "./Base/typo";
 @import "./Base/-mixins.scss";
 @import "./Layout/header";
-@import "./Layout/localisation";
-@import "./Layout/explore";
-@import "./Layout/howto";
-@import "./Layout/restaurant";
 @import "./Layout/footer";
-@import "./Layout/menu";
+@import "./Pages/index";
+@import "./Pages/menu";
 
 body{
     margin: 0;

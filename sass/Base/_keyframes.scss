@@ -1,0 +1,14 @@
+@keyframes loader {
+    0%{
+background-color: $color-main;
+    }
+    50%{
+        background-color: $color-second;
+    }
+    99%{background-color: $color-third;
+        height:100vh}
+
+    100%{background-color: $color-third;
+        height: 0px;
+    }
+}
