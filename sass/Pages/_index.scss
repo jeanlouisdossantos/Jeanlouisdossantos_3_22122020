@@ -7,6 +7,14 @@
     position: fixed;
     z-index: 10000;
     animation: loader 3s  forwards;
+    &__logo{
+      visibility: inherit;
+      display: flex;
+      justify-content: center;
+      margin-top:25%;
+      @include logo-font(48px);
+      animation : rotatelogo 3s forwards;
+    }
 }
 
 .explore {
@@ -142,15 +150,9 @@
       }
     }
     &__like{
-    .fas{
-        opacity:0;
-        transition: 1s;
-    
-    }
-      .fas:hover{
-        opacity:1;
-        color:$color-main;
-      }
+
+      @include like_icon
+  
       }
     
   }

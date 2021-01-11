@@ -1,0 +1,19 @@
+@mixin like_icon {
+    .fas {
+        opacity: 0;
+        transition: 1s;
+    }
+    .fas:hover{
+        opacity:1;
+        color:red}
+        .fa-gradient {
+            background: linear-gradient(170deg,
+            lighten($color-second, 5%),
+            $color-second 10%,
+            $color-main);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color:transparent;
+            
+        }
+    }
+     
