@@ -10,7 +10,7 @@
     visibility: inherit;
     display: flex;
     justify-content: center;
-    margin-top: 25%;
+    margin-top: 50%;
     @include logo-font(48px);
     animation: rotatelogo 3s forwards;
   }

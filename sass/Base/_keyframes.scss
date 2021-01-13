@@ -17,10 +17,10 @@
 }
 @keyframes slidesfromright {
   from {
-    transform: translateX(2000px);
+    width:0;
   }
   to {
-    transform: translateX(0px);
+    width:80px;
   }
 }
 @keyframes rotatelogo {

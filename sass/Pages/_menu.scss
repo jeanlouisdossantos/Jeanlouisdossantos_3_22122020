@@ -69,12 +69,28 @@ z-index: -1; }
   background-color: $color-white;
   border-radius: 10px;
   box-shadow: 5px 5px 5px grey;
+  
   &:hover{
     .dishes__checkbox{
-      width:80px;
+      width:40px;
       display: flex;
       background-color:$color-third;
       border-radius: 0px 10px 10px 0px;
+      animation: slidesfromright 0.5s both;
+    }
+    .dishes{
+      width:50%;
+
+    }
+    .dishes__mainname{
+      overflow: hidden;
+      text-overflow: ellipsis;
+
+    }
+    .dishes__secondname{
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
     }
   }
 }
@@ -84,15 +100,16 @@ z-index: -1; }
   &__mainname {
     font-weight: 900;
     width:90%;
-    overflow: hidden;
     white-space: nowrap;
-    text-overflow: ellipsis;  
+      
     &::first-letter {
       text-transform: uppercase;
     }
     
   }
   &__secondname{
+    width:90%;
+    white-space: normal;
     &::first-letter {
         text-transform: uppercase;
       }
@@ -108,7 +125,7 @@ z-index: -1; }
     justify-content: center;
     align-items: center;
       i{
-    
+      padding: 5px;
       border-radius: 50%;
       background-color: white;
       color: $color-third;

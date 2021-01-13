@@ -65,10 +65,10 @@ footer {
 }
 @keyframes slidesfromright {
   from {
-    transform: translateX(2000px);
+    width: 0;
   }
   to {
-    transform: translateX(0px);
+    width: 80px;
   }
 }
 @keyframes rotatelogo {
@@ -109,7 +109,7 @@ footer {
   visibility: inherit;
   display: flex;
   justify-content: center;
-  margin-top: 25%;
+  margin-top: 50%;
   font-family: "Shrikhand";
   font-size: 48px;
   animation: rotatelogo 3s forwards;
@@ -365,10 +365,23 @@ footer {
   box-shadow: 5px 5px 5px grey;
 }
 .dishes__card:hover .dishes__checkbox {
-  width: 80px;
+  width: 40px;
   display: flex;
   background-color: #99E2D0;
   border-radius: 0px 10px 10px 0px;
+  animation: slidesfromright 0.5s both;
+}
+.dishes__card:hover .dishes {
+  width: 50%;
+}
+.dishes__card:hover .dishes__mainname {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.dishes__card:hover .dishes__secondname {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .dishes {
@@ -378,12 +391,14 @@ footer {
 .dishes__mainname {
   font-weight: 900;
   width: 90%;
-  overflow: hidden;
   white-space: nowrap;
-  text-overflow: ellipsis;
 }
 .dishes__mainname::first-letter {
   text-transform: uppercase;
+}
+.dishes__secondname {
+  width: 90%;
+  white-space: normal;
 }
 .dishes__secondname::first-letter {
   text-transform: uppercase;
@@ -400,6 +415,7 @@ footer {
   align-items: center;
 }
 .dishes__checkbox i {
+  padding: 5px;
   border-radius: 50%;
   background-color: white;
   color: #99E2D0;
