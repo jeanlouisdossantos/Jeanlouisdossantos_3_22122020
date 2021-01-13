@@ -336,7 +336,7 @@ footer {
   flex-direction: column;
   padding-left: 20px;
   margin-top: 20px;
-  animation: appearfrombotom 1s both;
+  animation: appearfrombotom 0.5s both;
 }
 .dishesgroup__name {
   text-transform: uppercase;
