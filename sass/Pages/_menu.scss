@@ -31,7 +31,7 @@ z-index: -1; }
 }
 .restaurant__name {
   @include logo-font(18px);
-  margin-left: 10px;
+  margin: auto 0 auto 20px;
   &:first-letter {
     text-transform: capitalize;
   }
@@ -41,7 +41,7 @@ z-index: -1; }
   flex-direction: column;
   padding-left: 20px;
   margin-top: 20px;
-  animation: slidesfromright 1s;
+  animation: appearfrombotom 1s both;
   &__name {
     text-transform: uppercase;
 
@@ -51,19 +51,36 @@ z-index: -1; }
     height: 2px;
     background-color: $color-third;
   }
+  &:nth-child(2){
+    animation-delay: 0.5s;
+  }
+  &:nth-child(3){
+    animation-delay: 1s;
+  }
+  &:nth-child(4){
+    animation-delay: 1.5s;
+  }
   
 }
 .dishes__card {
   display: flex;
   justify-content: space-between;
   margin-top: 15px;
-  padding:10px;
   background-color: $color-white;
   border-radius: 10px;
   box-shadow: 5px 5px 5px grey;
+  &:hover{
+    .dishes__checkbox{
+      width:80px;
+      display: flex;
+      background-color:$color-third;
+      border-radius: 0px 10px 10px 0px;
+    }
+  }
 }
 .dishes {
-  width: 80%;
+  width: 70%;
+  margin:10px;
   &__mainname {
     font-weight: 900;
     width:90%;
@@ -81,18 +98,21 @@ z-index: -1; }
       }
 }
   &__price {
+    margin:10px;
     align-self: flex-end;
-    margin: 0px 15px 3px 0px;
     font-weight: 600;
   }
-  &__selected {
+  &__checkbox{
+    background-color: $color-third;
     display: none;
-  }
-
-  &:active {
-    &::after {
-      width: 30px;
-      background-color: $color-third;
+    justify-content: center;
+    align-items: center;
+      i{
+    
+      border-radius: 50%;
+      background-color: white;
+      color: $color-third;
     }
   }
 }
+
