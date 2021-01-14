@@ -31,3 +31,20 @@ footer {
     }
   }
 }
+@media (min-width:$screen-lg-min){
+  footer{
+display: flex;
+flex-flow: row wrap;
+justify-content: space-between;}
+
+.footer{
+  &__logo {
+
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  
+}
+
+}
+}

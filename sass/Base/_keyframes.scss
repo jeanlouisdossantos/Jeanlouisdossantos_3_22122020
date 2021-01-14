@@ -2,15 +2,15 @@
   0% {
     background-color: $color-main;
   }
-  50% {
+  33% {
     background-color: $color-second;
   }
-  99% {
+  66% {
     background-color: $color-third;
   }
 
   100% {
-    background-color: $color-third;
+    background-color: $color-main;
 
     visibility: hidden;
   }

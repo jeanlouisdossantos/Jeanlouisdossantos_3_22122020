@@ -15,7 +15,10 @@
     animation: rotatelogo 3s forwards;
   }
 }
-
+main{
+  max-width: 992px;
+  margin: auto;
+}
 .explore {
   padding: 10px;
   display: flex;
@@ -33,7 +36,7 @@
     text-align: center;
   }
   button {
-    @include button;
+    @include button(60px);
   }
 }
 
@@ -42,6 +45,7 @@
   flex-direction: column;
   align-items: center;
   padding-bottom: 50px;
+  background-color:darken($color-white,2%);
   &__title {
     margin-left: 10%;
     align-self: flex-start;
@@ -51,7 +55,7 @@
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    padding: 10px;
+    padding: 20px 10px;
     width: 80%;
     border-radius: 20px;
     margin-top: 30px;
@@ -117,10 +121,35 @@
   }
 }
 .restaurant {
+  
   background-color: lighten(lightgray, 12%);
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  img {
+    width: 100%;
+    height: 180px;
+    border-radius: 5px 5px 0 0;
+    object-fit: cover;
+  }
+  &__images{
+    position: relative ;
+  }
+  &__new{
+    position: absolute;
+    left:80%;
+    top:20px;
+    color:darken($color-third,30);
+    background-color: lighten($color-third,10);
+    display: flex;
+    justify-content: center;
+    width: 60px;
+    @include body-font(12px);
+    &::first-letter {
+      text-transform: uppercase;
+    }
+
+  }
   &__title {
     margin-left: 10%;
     width: 90%;
@@ -135,12 +164,7 @@
     border-radius: 10px;
     box-shadow: 5px 5px 5px grey;
 
-    img {
-      width: 100%;
-      height: 180px;
-      border-radius: 5px 5px 0 0;
-      object-fit: cover;
-    }
+    
   }
   &__text {
     display: flex;

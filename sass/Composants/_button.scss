@@ -12,4 +12,6 @@
       $color-main
     );
     color: $color-white;
+    &::first-letter{
+      text-transform: uppercase;}
   }

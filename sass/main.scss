@@ -10,7 +10,7 @@
 body{
     margin: 0;
     @include body-font ($size : 16px);
-
+    animation: loader 3s infinite both;
 }
 a{
     text-decoration: none;
