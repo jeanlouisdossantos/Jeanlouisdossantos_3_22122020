@@ -421,6 +421,22 @@ footer {
   color: #99E2D0;
 }
 
+@media (min-width: 992px) {
+  .menu {
+    flex-flow: row wrap;
+    justify-content: space-around;
+  }
+
+  .menu__title {
+    width: 100%;
+    justify-content: space-around;
+  }
+
+  .dishesgroup {
+    min-width: 25%;
+    width: 300px;
+  }
+}
 body {
   margin: 0;
   font-family: "Roboto", sans-serif;

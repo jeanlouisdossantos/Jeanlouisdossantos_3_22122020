@@ -4,3 +4,13 @@ $color-third : #99E2D0;
 $color-background : lightgrey;
 $color-white: white; 
 $color-background-footer:#353535;
+
+
+// Small tablets and large smartphones
+$screen-sm-min: 576px;
+ 
+// Tablets and small desktops
+$screen-lg-min: 992px;
+ 
+// Large tablets and desktops
+$screen-xl-min: 1200px;
