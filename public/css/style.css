@@ -310,7 +310,7 @@ main {
 }
 .restaurant__like .fas {
   opacity: 0;
-  transition: 1s;
+  transition: 1s ease-in-out;
 }
 .restaurant__like .fa-stack:hover .fas {
   opacity: 1;
