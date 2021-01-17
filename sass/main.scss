@@ -1,8 +1,18 @@
-$box:100px;
-$box-color:red;
+@import "./Utils/variables";
+@import "./Base/typo";
+@import "./Composants/button";
+@import "./Composants/like";
+@import "./Layout/header";
+@import "./Layout/footer";
+@import "./Pages/index";
+@import "./Pages/menu";
 
-.box{
-    width: $box;
-    height: $box;
-    background-color: $box-color;
+body{
+    margin: 0;
+    @include body-font ($size : 16px);
+    animation: loader 3s infinite both;
 }
+a{
+    text-decoration: none;
+    color: black;
+  }
