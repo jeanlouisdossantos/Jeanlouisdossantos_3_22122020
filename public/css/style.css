@@ -149,9 +149,12 @@ footer {
     opacity: 1;
   }
 }
+header {
+  width: 100%;
+}
+
 main {
-  max-width: 992px;
-  margin: auto;
+  width: 100%;
 }
 
 .explore {
@@ -247,6 +250,7 @@ main {
   align-items: center;
   background: linear-gradient(grey, lightgrey 10%, lightgrey);
   height: 100px;
+  width: 100%;
 }
 .localisation input {
   background-color: lightgrey;
@@ -349,6 +353,27 @@ main {
   -webkit-text-fill-color: transparent;
 }
 
+@media (min-width: 992px) {
+  main {
+    display: flex;
+    flex-flow: row wrap;
+  }
+
+  .explore {
+    width: 49.9%;
+    margin: 0;
+    padding: 0;
+    background-color: #e2e2e2;
+    padding-bottom: 20px;
+  }
+
+  .howto {
+    width: 49.9%;
+    margin: 0;
+    padding: 0;
+    padding-bottom: 20px;
+  }
+}
 .menu__image {
   height: 150px;
 }
@@ -444,7 +469,7 @@ button:focus {
   width: 50%;
 }
 .dishes__card:hover .dishes__mainname {
-  overflow: hidden;
+  overflow: auto;
   text-overflow: ellipsis;
 }
 .dishes__card:hover .dishes__secondname {
@@ -460,7 +485,6 @@ button:focus {
 .dishes__mainname {
   font-weight: 900;
   width: 90%;
-  white-space: nowrap;
 }
 .dishes__mainname::first-letter {
   text-transform: uppercase;
@@ -501,10 +525,14 @@ button:focus {
     justify-content: space-around;
   }
 
+  .restaurant__name {
+    font-size: 30px;
+  }
+
   .dishesgroup {
     min-width: 25%;
     width: 300px;
-    height: 400px;
+    height: 500px;
   }
 
   button {
@@ -528,7 +556,6 @@ body {
   margin: 0;
   font-family: "Roboto", sans-serif;
   font-size: 16px;
-  animation: loader 3s infinite both;
 }
 
 a {
