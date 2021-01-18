@@ -1,20 +1,4 @@
 @import "../Base/keyframes";
-
-.loader {
-  width: 100%;
-  height: 100vh;
-  position: fixed;
-  z-index: 10000;
-  animation: loader 3s forwards;
-  &__logo {
-    visibility: inherit;
-    display: flex;
-    justify-content: center;
-    margin-top: 50%;
-    @include logo-font(48px);
-    animation: rotatelogo 3s forwards;
-  }
-}
 main{
   max-width: 992px;
   margin: auto;

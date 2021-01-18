@@ -12,6 +12,7 @@
             lighten($color-second, 5%),
             $color-second 10%,
             $color-main);
+            background-clip: text;
             -webkit-background-clip: text;
             -webkit-text-fill-color:transparent;
             
