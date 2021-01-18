@@ -184,6 +184,9 @@ main {
 .explore button::first-letter {
   text-transform: uppercase;
 }
+.explore button:focus {
+  outline: none;
+}
 
 .howto {
   display: flex;
@@ -384,6 +387,9 @@ button {
 button::first-letter {
   text-transform: uppercase;
 }
+button:focus {
+  outline: none;
+}
 
 .restaurant__name {
   font-family: "Shrikhand";
@@ -513,6 +519,9 @@ button::first-letter {
   }
   button::first-letter {
     text-transform: uppercase;
+  }
+  button:focus {
+    outline: none;
   }
 }
 body {
