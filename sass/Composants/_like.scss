@@ -1,20 +1,35 @@
-@mixin like_icon {
+    .restaurant__like{
+        display: flex;
+        justify-content: center;
+        align-items: baseline;
+        font-size: 1.2rem;
+    
     .fas {
         opacity: 0;
-        transition: 1s;
+        transition: 1s ease-in-out;
     }
-    .fa-stack:hover{
+}
+    
+    .fa-stack{
+        margin: auto;
+        align-self: center;
+        &:hover{
         .fas{opacity:1;}
         .far{opacity: 0;}
-    }
+    }}
     .fa-gradient {
     background: linear-gradient(170deg,
             lighten($color-second, 5%),
             $color-second 10%,
             $color-main);
+            background-clip: text;
             -webkit-background-clip: text;
             -webkit-text-fill-color:transparent;
             
         }
+    
+    @media (min-width:$screen-lg-min){
+        .restaurant__like{
+                        font-size: 1.8rem;
+        }
     }
-     

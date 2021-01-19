@@ -1,5 +1,77 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
+.restaurant__like {
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+  font-size: 1.2rem;
+}
+.restaurant__like .fas {
+  opacity: 0;
+  transition: 1s ease-in-out;
+}
+
+.fa-stack {
+  margin: auto;
+  align-self: center;
+}
+.fa-stack:hover .fas {
+  opacity: 1;
+}
+.fa-stack:hover .far {
+  opacity: 0;
+}
+
+.fa-gradient {
+  background: linear-gradient(170deg, #ff93e1, #FF79DA 10%, #9356DC);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+@media (min-width: 992px) {
+  .restaurant__like {
+    font-size: 1.8rem;
+  }
+}
+.loader {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  z-index: 10000;
+  animation: loader 3s forwards;
+  display: flex;
+  justify-content: center;
+}
+
+.lds-dual-ring {
+  display: inline-block;
+  width: 80px;
+  height: 80px;
+  transform: scale(1.5);
+  margin-top: 150px;
+}
+
+.lds-dual-ring:after {
+  content: " ";
+  display: block;
+  width: 64px;
+  height: 64px;
+  margin: 8px;
+  border-radius: 50%;
+  border: 6px solid #fff;
+  border-color: #fff transparent #fff transparent;
+  animation: lds-dual-ring 1.2s linear infinite;
+}
+
+@keyframes lds-dual-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
 header {
   display: flex;
   background-color: white;
@@ -17,12 +89,21 @@ header .header__logo {
   font-size: 32px;
 }
 
+@media (min-width: 992px) {
+  .header__logo {
+    font-size: 48px !important;
+  }
+}
 footer {
+  width: 100%;
   background-color: #353535;
   color: white;
-  padding: 20px;
+  margin: 0;
 }
 
+.footer {
+  border: 20px solid #353535;
+}
 .footer__logo {
   font-family: "Shrikhand";
   font-size: 24px;
@@ -49,12 +130,11 @@ footer {
 }
 
 @media (min-width: 992px) {
-  footer {
+  .footer {
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
   }
-
   .footer__logo {
     width: 100%;
     display: flex;
@@ -111,26 +191,12 @@ footer {
     opacity: 1;
   }
 }
-.loader {
+header {
   width: 100%;
-  height: 100vh;
-  position: fixed;
-  z-index: 10000;
-  animation: loader 3s forwards;
-}
-.loader__logo {
-  visibility: inherit;
-  display: flex;
-  justify-content: center;
-  margin-top: 50%;
-  font-family: "Shrikhand";
-  font-size: 48px;
-  animation: rotatelogo 3s forwards;
 }
 
 main {
-  max-width: 992px;
-  margin: auto;
+  width: 100%;
 }
 
 .explore {
@@ -162,6 +228,9 @@ main {
 }
 .explore button::first-letter {
   text-transform: uppercase;
+}
+.explore button:focus {
+  outline: none;
 }
 
 .howto {
@@ -223,6 +292,7 @@ main {
   align-items: center;
   background: linear-gradient(grey, lightgrey 10%, lightgrey);
   height: 100px;
+  width: 100%;
 }
 .localisation input {
   background-color: lightgrey;
@@ -244,12 +314,21 @@ main {
   font-weight: bolder;
   text-align: center;
 }
+.localisation input::-moz-placeholder {
+  color: black;
+  opacity: 1;
+  font-family: "Roboto", sans-serif;
+  font-size: 18px;
+  font-weight: bolder;
+  text-align: center;
+}
 
 .restaurant {
   background-color: #f2f2f2;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  width: 100%;
 }
 .restaurant img {
   width: 100%;
@@ -308,22 +387,35 @@ main {
 .restaurant__desc__title__localisation {
   font-size: 14px;
 }
-.restaurant__like .fas {
-  opacity: 0;
-  transition: 1s;
-}
-.restaurant__like .fa-stack:hover .fas {
-  opacity: 1;
-}
-.restaurant__like .fa-stack:hover .far {
-  opacity: 0;
-}
-.restaurant__like .fa-gradient {
-  background: linear-gradient(170deg, #ff93e1, #FF79DA 10%, #9356DC);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
 
+@media (min-width: 992px) {
+  main {
+    display: flex;
+    flex-flow: row wrap;
+  }
+
+  .explore {
+    width: 49.9%;
+    margin: 0;
+    padding: 0;
+    background-color: #e2e2e2;
+    padding-bottom: 20px;
+  }
+
+  .howto {
+    width: 49.9%;
+    margin: 0;
+    padding: 0;
+    padding-bottom: 20px;
+  }
+
+  .restaurant__desc__title {
+    font-size: larger;
+  }
+  .restaurant__desc__localisation {
+    font-size: larger;
+  }
+}
 .menu__image {
   height: 150px;
 }
@@ -361,6 +453,9 @@ button {
 }
 button::first-letter {
   text-transform: uppercase;
+}
+button:focus {
+  outline: none;
 }
 
 .restaurant__name {
@@ -416,7 +511,7 @@ button::first-letter {
   width: 50%;
 }
 .dishes__card:hover .dishes__mainname {
-  overflow: hidden;
+  overflow: auto;
   text-overflow: ellipsis;
 }
 .dishes__card:hover .dishes__secondname {
@@ -432,7 +527,6 @@ button::first-letter {
 .dishes__mainname {
   font-weight: 900;
   width: 90%;
-  white-space: nowrap;
 }
 .dishes__mainname::first-letter {
   text-transform: uppercase;
@@ -470,13 +564,18 @@ button::first-letter {
 
   .menu__title {
     width: 100%;
-    justify-content: space-around;
+    justify-content: center;
+  }
+
+  .restaurant__name {
+    font-size: 48px;
+    margin-right: 50px;
   }
 
   .dishesgroup {
     min-width: 25%;
     width: 300px;
-    height: 400px;
+    height: 500px;
   }
 
   button {
@@ -492,12 +591,15 @@ button::first-letter {
   button::first-letter {
     text-transform: uppercase;
   }
+  button:focus {
+    outline: none;
+  }
 }
 body {
   margin: 0;
+  width: 100%;
   font-family: "Roboto", sans-serif;
   font-size: 16px;
-  animation: loader 3s infinite both;
 }
 
 a {

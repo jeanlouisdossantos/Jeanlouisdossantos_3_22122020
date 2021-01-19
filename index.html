@@ -13,16 +13,16 @@
 
 <body>
     <div class="loader">
-        <div class="loader__logo">ohmyfood</div>
+        <div class="lds-dual-ring"></div>
     </div>
 
     <main>
         <header>
             <div class="header__logo">ohmyfood</div>
         </header>
-        <form class="localisation" method="POST">
+        <form class="localisation" method="POST" action="index.html">
             <i class="fas fa-map-marker-alt"></i>
-            <input type="text" placeholder="Paris , Belleville">
+            <input type="text" placeholder="Paris , Belleville" name="place">
         </form>
         <section class="explore">
             <h2>Reservez le menu qui vous convient</h2>
@@ -156,11 +156,13 @@
             </div>
         </section>
         <footer>
+            <div class="footer">
             <div class="footer__logo">ohmyfood</div>
             <div class="footer__propose"><i class="fas fa-utensils"></i> Proposer un restaurant</div>
             <div class="footer__partner"><i class="fas fa-handshake"></i>Devenir partenaire</div>
             <div class="footer__cgu">Mentions Légale</div>
             <div class="footer__contact"><a href="mailto:noreply">Contact</a></div>
+        </div>
         </footer>
     </main>
 

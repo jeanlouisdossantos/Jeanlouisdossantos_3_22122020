@@ -2,6 +2,7 @@
 @import "./Base/typo";
 @import "./Composants/button";
 @import "./Composants/like";
+@import "./Composants/loader";
 @import "./Layout/header";
 @import "./Layout/footer";
 @import "./Pages/index";
@@ -9,8 +10,9 @@
 
 body{
     margin: 0;
+    width: 100%;
+    
     @include body-font ($size : 16px);
-    animation: loader 3s infinite both;
 }
 a{
     text-decoration: none;

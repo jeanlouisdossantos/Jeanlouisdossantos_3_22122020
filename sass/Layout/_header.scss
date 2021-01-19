@@ -16,3 +16,8 @@ header{
         
     }
 }
+@media (min-width:$screen-lg-min){
+    .header__logo{
+          font-size: 48px !important;
+        }
+}
