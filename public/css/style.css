@@ -1,5 +1,39 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
+.restaurant__like {
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+  font-size: 1.2rem;
+}
+.restaurant__like .fas {
+  opacity: 0;
+  transition: 1s ease-in-out;
+}
+
+.fa-stack {
+  margin: auto;
+  align-self: center;
+}
+.fa-stack:hover .fas {
+  opacity: 1;
+}
+.fa-stack:hover .far {
+  opacity: 0;
+}
+
+.fa-gradient {
+  background: linear-gradient(170deg, #ff93e1, #FF79DA 10%, #9356DC);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+@media (min-width: 992px) {
+  .restaurant__like {
+    font-size: 1.8rem;
+  }
+}
 .loader {
   width: 100%;
   height: 100vh;
@@ -55,6 +89,11 @@ header .header__logo {
   font-size: 32px;
 }
 
+@media (min-width: 992px) {
+  .header__logo {
+    font-size: 48px !important;
+  }
+}
 footer {
   width: 100%;
   background-color: #353535;
@@ -348,35 +387,6 @@ main {
 .restaurant__desc__title__localisation {
   font-size: 14px;
 }
-.restaurant__like .restaurant__like {
-  display: flex;
-  justify-content: center;
-  align-items: baseline;
-}
-.restaurant__like .fas {
-  opacity: 0;
-  transition: 1s ease-in-out;
-  font-size: 1.5rem;
-}
-.restaurant__like .far {
-  font-size: 1.5rem;
-}
-.restaurant__like .fa-stack {
-  margin: auto;
-  align-self: center;
-}
-.restaurant__like .fa-stack:hover .fas {
-  opacity: 1;
-}
-.restaurant__like .fa-stack:hover .far {
-  opacity: 0;
-}
-.restaurant__like .fa-gradient {
-  background: linear-gradient(170deg, #ff93e1, #FF79DA 10%, #9356DC);
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
 
 @media (min-width: 992px) {
   main {
@@ -397,6 +407,13 @@ main {
     margin: 0;
     padding: 0;
     padding-bottom: 20px;
+  }
+
+  .restaurant__desc__title {
+    font-size: larger;
+  }
+  .restaurant__desc__localisation {
+    font-size: larger;
   }
 }
 .menu__image {
@@ -551,7 +568,7 @@ button:focus {
   }
 
   .restaurant__name {
-    font-size: 70px;
+    font-size: 48px;
     margin-right: 50px;
   }
 

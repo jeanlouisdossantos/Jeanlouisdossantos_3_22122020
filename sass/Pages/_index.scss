@@ -183,9 +183,7 @@ main{
       }
     }
   }
-  &__like {
-    @include like_icon;
-  }
+ 
 }
 @media (min-width:$screen-lg-min) {
   main{display: flex;
@@ -206,8 +204,17 @@ main{
     margin: 0;
     padding: 0;
     padding-bottom: 20px;
-    
-    
+    }
+
+.restaurant{
+  &__desc{
+    &__title{
+      font-size: larger;
+    }
+    &__localisation{
+      font-size: larger;
+    }
   }
+}
 
 }
