@@ -63,12 +63,12 @@ main{
       align-items: center;
       background-color: $color-main;
       position: relative;
-      left: -15px;
+      left: -20px;
       color: $color-white;
       font-size: 12px;
     }
     &__logo {
-      margin-left: 20px;
+      margin-left: 10px;
       color: grey;
     }
     &__text {
@@ -144,6 +144,9 @@ main{
     border-radius: 3px;
 
     @include body-font(12px);
+    p{
+      margin:6px auto
+    }
     &::first-letter {
       text-transform: uppercase;
     }
