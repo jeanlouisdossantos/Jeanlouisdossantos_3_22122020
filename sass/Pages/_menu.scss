@@ -81,6 +81,9 @@ z-index: -1; }
       background-color:$color-third;
       border-radius: 0px 10px 10px 0px;
       animation: slidesfromright 0.5s both;
+      i{
+        animation: rotation 0.5s both;
+      }
     }
     .dishes{
       width:50%;
