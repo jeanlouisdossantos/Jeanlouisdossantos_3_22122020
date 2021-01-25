@@ -1,13 +1,15 @@
 header{
     display: flex;
+    align-items: center;
     background-color: $color-white;
     height: 70px;
     width: 100%;
     a {
-        height: 20px;
+        height: 30px;
         position: absolute;
         left: 20px;
-        top: 20px;
+        display: flex;
+        align-items: center;
     }
     .header{
         &__logo{
