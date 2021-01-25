@@ -74,14 +74,17 @@
 }
 header {
   display: flex;
+  align-items: center;
   background-color: white;
-  height: 60px;
+  height: 70px;
+  width: 100%;
 }
 header a {
-  height: 20px;
+  height: 30px;
   position: absolute;
   left: 20px;
-  top: 20px;
+  display: flex;
+  align-items: center;
 }
 header .header__logo {
   margin: auto;
@@ -191,6 +194,14 @@ footer {
     opacity: 1;
   }
 }
+@keyframes rotation {
+  0% {
+    transform: rotate(180deg);
+  }
+  100% {
+    transform: rotate(0);
+  }
+}
 header {
   width: 100%;
 }
@@ -236,12 +247,12 @@ main {
 .howto {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
   padding-bottom: 50px;
   background-color: #fafafa;
 }
 .howto__title {
-  margin-left: 10%;
+  margin-left: 20px;
   align-self: flex-start;
 }
 .howto__steps {
@@ -252,7 +263,7 @@ main {
   padding: 20px 10px;
   width: 80%;
   border-radius: 20px;
-  margin-top: 30px;
+  margin: 30px auto 0px 20px;
 }
 .howto__steps:hover {
   background-color: #e4d5f6;
@@ -270,12 +281,12 @@ main {
   align-items: center;
   background-color: #9356DC;
   position: relative;
-  left: -15px;
+  left: -20px;
   color: white;
   font-size: 12px;
 }
 .howto__steps__logo {
-  margin-left: 20px;
+  margin-left: 10px;
   color: grey;
 }
 .howto__steps__text {
@@ -291,7 +302,7 @@ main {
   justify-content: center;
   align-items: center;
   background: linear-gradient(grey, lightgrey 10%, lightgrey);
-  height: 100px;
+  height: 40px;
   width: 100%;
 }
 .localisation input {
@@ -343,26 +354,30 @@ main {
   position: absolute;
   left: 75%;
   top: 20px;
-  color: #32b091;
-  background-color: #c1ede2;
+  color: #30a387;
+  background-color: #99e2d0;
   display: flex;
   justify-content: center;
   width: 60px;
+  border-radius: 3px;
   font-family: "Roboto", sans-serif;
   font-size: 12px;
+}
+.restaurant__new p {
+  margin: 6px auto;
 }
 .restaurant__new::first-letter {
   text-transform: uppercase;
 }
 .restaurant__title {
-  margin-left: 10%;
+  margin-left: 20px;
   width: 90%;
 }
 .restaurant__card {
-  margin: 20px auto;
+  margin: 20px 20px;
   border-radius: 5px;
   background-color: white;
-  width: 80%;
+  width: 90%;
   max-width: 400px;
   border-radius: 10px;
   box-shadow: 5px 5px 5px grey;
@@ -373,6 +388,7 @@ main {
 }
 .restaurant__text a {
   width: 80%;
+  margin: auto;
 }
 .restaurant__desc {
   width: 80%;
@@ -460,7 +476,7 @@ button:focus {
 
 .restaurant__name {
   font-family: "Shrikhand";
-  font-size: 18px;
+  font-size: 24px;
   margin: auto 0 auto 20px;
 }
 .restaurant__name:first-letter {
@@ -507,6 +523,9 @@ button:focus {
   border-radius: 0px 10px 10px 0px;
   animation: slidesfromright 0.5s both;
 }
+.dishes__card:hover .dishes__checkbox i {
+  animation: rotation 0.5s both;
+}
 .dishes__card:hover .dishes {
   width: 50%;
 }
@@ -534,6 +553,9 @@ button:focus {
 .dishes__secondname {
   width: 90%;
   white-space: normal;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 .dishes__secondname::first-letter {
   text-transform: uppercase;
