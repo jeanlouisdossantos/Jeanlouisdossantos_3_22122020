@@ -31,11 +31,11 @@ main{
 .howto {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
   padding-bottom: 50px;
   background-color:darken($color-white,2%);
   &__title {
-    margin-left: 10%;
+    margin-left:20px;
     align-self: flex-start;
   }
   &__steps {
@@ -46,7 +46,7 @@ main{
     padding: 20px 10px;
     width: 80%;
     border-radius: 20px;
-    margin-top: 30px;
+    margin: 30px auto 0px 20px;
     &:hover {
       background-color: lighten($color-main, $amount: 30);
       color: $color-main;
@@ -85,7 +85,7 @@ main{
   justify-content: center;
   align-items: center;
   background: linear-gradient(grey, $color-background 10%, $color-background);
-  height: 100px;
+  height: 40px;
   width: 100%;
   
   input {
@@ -136,11 +136,13 @@ main{
     position: absolute;
     left:75%;
     top:20px;
-    color:darken($color-third,30);
-    background-color: lighten($color-third,10);
+    color:rgb(48,163,135);
+    background-color: rgb(153,226,208);
     display: flex;
     justify-content: center;
     width: 60px;
+    border-radius: 3px;
+
     @include body-font(12px);
     &::first-letter {
       text-transform: uppercase;
@@ -148,15 +150,15 @@ main{
 
   }
   &__title {
-    margin-left: 10%;
+    margin-left: 20px;
     width: 90%;
   }
 
   &__card {
-    margin: 20px auto;
+    margin: 20px 20px ;
     border-radius: 5px;
     background-color: white;
-    width: 80%;
+    width: 90%;
     max-width: 400px;
     border-radius: 10px;
     box-shadow: 5px 5px 5px grey;
@@ -168,6 +170,7 @@ main{
     padding: 10px;
     a {
       width: 80%;
+      margin:auto;
     }
   }
   &__desc {
