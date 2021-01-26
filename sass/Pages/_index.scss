@@ -142,6 +142,7 @@ main{
     justify-content: center;
     width: 60px;
     border-radius: 3px;
+    font-weight: bolder;
 
     @include body-font(12px);
     p{
